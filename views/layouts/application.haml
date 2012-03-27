@@ -13,19 +13,20 @@
   = yield_content :meta
   %meta{:content => "chris @ destructioniseasier.co.uk", :name => "author"}
   %meta{:content => "", :name => "description"}
-  %meta{:content => "width=device-width", :name => "viewport"}
+  %meta{:content => "width=device-width,initial-scale=1.0", :name => "viewport"}
   %link{:href => "/images/favicon.ico", :rel => "shortcut icon"}
   %link{:href => "/images/favicon.png", :rel => "icon", :type => "image/png"}
   %link{:href => "/images/touch.png", :rel => "apple-touch-icon"}
   %link{:href=>'/stylesheets/application.css', :media => "screen", :rel => 'stylesheet'}
   %script{:src => "/javascripts/lib/modernizr-1.6.min.js"}
+  = partial :_analytics
     
   %body
     = partial :_nav_main
     = yield
-    = partial :_analytics
 
     %script{:src => "http://code.jquery.com/jquery-1.7.1.min.js"}
     :plain
       <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
     %script{:src => "/javascripts/application.js"}
+    = yield_content :footer_scripts
