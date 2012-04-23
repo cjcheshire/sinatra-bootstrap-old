@@ -1,8 +1,8 @@
 source :rubygems
 
 gem 'rake'
-gem 'sinatra', '~> 1.2.3' 
-gem 'sinatra-content-for', '~>0.2'
+gem 'sinatra', '~> 1.3.0' 
+gem 'sinatra-contrib'
 gem 'shotgun', '~> 0.9'
 gem 'haml', '~> 3.1.4'
 gem "sinatra-static-assets", "~> 1.0.2"
